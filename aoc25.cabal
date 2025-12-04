@@ -1,0 +1,38 @@
+cabal-version:      3.12
+name:               aoc25
+version:            0.1.0.0
+license:            NONE
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+library
+  exposed-modules:
+      Aoc.Days,
+  other-modules:
+      Aoc.DayN,
+      Aoc.Day01,
+      Aoc.Day02,
+  hs-source-dirs:
+      app
+  build-depends:
+      base ^>=4.18.3.0,
+  default-language: Haskell2010
+
+
+executable aoc25
+    exposed-modules: Days
+    import:           warnings
+
+    main-is:          Main.hs
+
+    build-depends: 
+        aoc25,
+        base ^>=4.18.3.0,
+        optparse-applicative
+
+    hs-source-dirs: app
+
+    default-language: Haskell2010
+
