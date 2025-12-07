@@ -18,6 +18,7 @@ library
       Aoc.Day04,
       Aoc.Day05,
       Aoc.Day06,
+      Aoc.Day07,
   hs-source-dirs:
       app,
   build-depends:
