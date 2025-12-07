@@ -3,6 +3,7 @@ module Aoc.Day04 (
     part2,
 )
 where
+
 import Debug.Trace (traceShow)
 
 canRemove :: [[Char]] -> [(Int, Int)]
@@ -26,9 +27,9 @@ part1 = show . length . canRemove . lines
 
 part2 :: String -> String
 part2 i = show $ f diagram
-    where
-        f d = let rs = canRemove d in length rs + (if not (null rs) then f (remove rs d) else 0)
-        diagram = lines i
-        w = length diagram - 1
-        h = length (head diagram) - 1
-        remove rs d = [[if (a, b) `elem` rs then '.' else d !! a !! b | b <- [0..h]] | a <- [0..w]]
+  where
+    f d = let rs = canRemove d in length rs + (if not (null rs) then f (remove rs d) else 0)
+    diagram = lines i
+    w = length diagram - 1
+    h = length (head diagram) - 1
+    remove rs d = [[if (a, b) `elem` rs then '.' else d !! a !! b | b <- [0 .. h]] | a <- [0 .. w]]
