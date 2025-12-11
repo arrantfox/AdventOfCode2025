@@ -8,6 +8,7 @@ import Aoc.Day05
 import Aoc.Day06
 import Aoc.Day07
 import Aoc.Day08
+import Aoc.Day09
 
 days =
     [ (Aoc.Day01.part1, Aoc.Day01.part2)
@@ -18,4 +19,5 @@ days =
     , (Aoc.Day06.part1, Aoc.Day06.part2)
     , (Aoc.Day07.part1, Aoc.Day07.part2)
     , (Aoc.Day08.part1, Aoc.Day08.part2)
+    , (Aoc.Day09.part1, Aoc.Day09.part2)
     ]
